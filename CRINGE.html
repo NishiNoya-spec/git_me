@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whatafuck?</title>
+
+  <style>
+    html {
+      box-sizing: border-box;
+      height: 100%;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+    body {
+      background: linear-gradient(220deg, #eb92be, #ddf123, #63faed);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      overflow: hidden;
+    }
+    .img-me {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 55px;
+      overflow: auto;
+      overflow: hidden;
+      z-index: 1000;
+      transition: width 1s, height 1s, border-radius 1s, box-shadow 1500ms;
+    }
+    .img-me::-webkit-scrollbar {
+      display: none;
+    }
+    .img-me:hover {
+      box-shadow: 4px 4px 100px rgba(255, 0, 221, 0.6), 
+                  -4px -4px 100px rgba(255, 0, 221, 0.6),
+                  -4px 4px 100px rgba(255, 0, 221, 0.6),
+                  4px -4px 100px rgba(255, 0, 221, 0.6);
+      width: 220px;
+      height: 220px;
+      border-radius: 110px;
+    }
+      .img-me > img {
+        position: absolute;
+        height: 196%;
+        width: 196%;
+        top: -42%;
+        left: -72%;
+        object-fit: cover;
+      }
+
+    /*for the newcomers*/
+
+    .new-img-me {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 55px;
+      overflow: auto;
+      overflow: hidden;
+      z-index: 1;
+      transition: width 1s, height 1s, border-radius 1s, box-shadow 1500ms;
+    }
+    .new-img-me::-webkit-scrollbar {
+      display: none;
+    }
+    .new-img-me:hover {
+      box-shadow: 4px 4px 100px rgba(108, 0, 209, 0.6), 
+                  -4px -4px 100px rgba(108, 0, 209, 0.6),
+                  -4px 4px 100px rgba(108, 0, 209, 0.6),
+                  4px -4px 100px rgba(108, 0, 209, 0.6);
+      width: 220px;
+      height: 220px;
+      border-radius: 110px;
+    }
+    
+  </style>
+
+</head>
+<body>
+  
+  <div id="cringe" class="img-me">
+    <img src="https://e.mail.ru/cgi-bin/getattach?file=1676096211428.jpg&id=16760962171631207017%3B0%3B1&mode=attachment&project=cloud&x-email=harry.hark%40bk.ru">
+  </div>
+
+  <audio id="sound1">
+    <source src="https://kaygaming.netlify.app/Soundpack2/shishupunchik.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="sound2">
+    <source src="https://kaygaming.netlify.app/Soundpack2/Yoink.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="sound3">
+    <source src="https://kaygaming.netlify.app/Soundpack2/Ooo.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="sound4">
+    <source src="https://zvukogram.com/mp3/cats/1363/ohne-titel_tctlx9y.mp3" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+
+    alert('check your volume bro, if you dont wanna die a painfull death');
+
+    let clicked = false;
+
+    function getCringed() {
+
+      // получаем id для нового элемента, который будем добавлять на экран
+      let newId = '' + new Date().getTime();
+
+      // получаем ширину и высоту экрана
+      let viewportWidth = window.innerWidth;
+      let viewportHeight = window.innerHeight;
+
+      // получаем рандомные координаты для нового элемента
+      let randTop = Math.floor(Math.random() * (viewportHeight - 100));
+      let randLeft = Math.floor(Math.random() * (viewportWidth - 100));
+
+      // создаем новый элементб и присваиваем ему новый id, теперь обращаемся к нему по id
+      const newCringe = document.createElement('div');
+      newCringe.id = newId;
+      document.body.appendChild(newCringe);
+
+      // создаем картинку, и запихиваем ее в созданный div
+      const img = document.createElement('img');
+      img.src = "https://e.mail.ru/cgi-bin/getattach?file=1676096211428.jpg&id=16760962171631207017%3B0%3B1&mode=attachment&project=cloud&x-email=harry.hark%40bk.ru";
+      img.style = 'position: absolute; height: 196%; width: 196%; top: -42%; left: -72%; object-fit: cover;';
+      newCringe.appendChild(img);
+
+      // конфигурируем атрибуты нового элемента
+      document.getElementById(newId).className = 'new-img-me';
+      document.getElementById(newId).style = 'position: absolute; z-index: 1;';
+      document.getElementById(newId).style.top = '' + randTop + 'px';
+      document.getElementById(newId).style.left = '' + randLeft + 'px';
+
+      document.getElementById(newId).rota
+
+      // рандомим размеры нового элемента
+      let newElRandSize = Math.floor((Math.random() * 80) + 30);
+
+      document.getElementById(newId).style.width = '' + newElRandSize + 'px';
+      document.getElementById(newId).style.height = '' + newElRandSize + 'px';
+      document.getElementById(newId).style.border.radius = '' + (newElRandSize/2) + 'px';
+
+      document.getElementById(newId).addEventListener('mouseenter', function() {
+        document.getElementById(newId).style.width = '' + (newElRandSize*2) + 'px';
+        document.getElementById(newId).style.height = '' + (newElRandSize*2) + 'px';
+        document.getElementById(newId).style.border.radius = '' + newElRandSize + 'px';
+      });
+      document.getElementById(newId).addEventListener('mouseleave', function() {
+        document.getElementById(newId).style.width = '' + newElRandSize + 'px';
+        document.getElementById(newId).style.height = '' + newElRandSize + 'px';
+        document.getElementById(newId).style.border.radius = '' + (newElRandSize/2) + 'px';
+      });
+
+      // ротэйтим новый элемент овер тайм
+      let deg = 0;
+      setInterval(function() {
+        if (deg > 360) {
+          deg = 0;
+        }
+        deg += 10;
+        document.getElementById(newId).style.transform = `rotate(${deg}deg)`;
+      }, 40);
+
+      clicked = true;
+
+    }
+
+    const cringeBut = document.getElementById('cringe');
+    cringeBut.onclick = getCringed;
+
+    // рандомим звуки по клику 
+    let getNum = 0;
+
+    cringeBut.addEventListener("click", function () {
+      getNum = Math.floor((Math.random() * 2) + 2);
+      console.log(getNum);
+      switch(getNum) {
+        case 1:
+          document.getElementById('sound1').play();
+          break;
+        case 2:
+          document.getElementById('sound2').play();
+          break;
+        case 3:
+          document.getElementById('sound3').play();
+          break;
+        case 4:
+          document.getElementById('sound4').play();
+          break;
+      }
+    });
+
+    let changeDeg = 220;
+    setInterval(function() {
+      if (clicked === true) {
+        if (changeDeg > 360) {
+          
+        }
+        changeDeg += 10;
+        document.body.style.background = `linear-gradient(${changeDeg}deg, #eb92be, #ddf123, #63faed)`;
+      }
+    }, 40);
+
+  </script>
+
+</body>
+</html>
